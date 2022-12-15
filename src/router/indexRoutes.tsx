@@ -6,6 +6,7 @@ import react_loadable from '../view/react-loadable实现懒加载'
 import LoadableComponent from '../view/LoadableComponent实现组件懒加载'
 import useMemo from '../view/useMemo'
 import useImperativeHandle from '../view/useImperativeHandle'
+import Effect from '../view/三个Effect的区别'
 
 export default function IndexRoutes() {
   return (
@@ -16,7 +17,8 @@ export default function IndexRoutes() {
         <Route path='/LoadableComponent' component={LoadableComponent} />
         <Route path='/useMemo' component={useMemo} />
         <Route path='/useImperativeHandle' component={useImperativeHandle} />
-        <Redirect to='/useImperativeHandle' />
+        <Route path='/Effect' component={Effect} />
+        <Redirect to='/Effect' />
       </Switch>
     </BrowserRouter>
   )
