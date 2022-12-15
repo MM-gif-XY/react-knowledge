@@ -324,3 +324,28 @@ export default React.forwardRef(Demo)
 
 ## useEffect, useLayoutEffect, useInsertionEffect区别
 
+**对应的文件夹中drawio文件需要在vscode中安装Draw.io Integration插件（待理解）**
+
+```jsx
+//useEffect,useLayoutEffect在React18后相关的执行时期微乎其微，在React18后useEffect处于动态的，可以说是没有准确的执行时期
+//useInsertionEffect的执行时期是在state改变后与Dom改变前执行的，主要是为了解决一些样式的注入问题
+
+import React, { useEffect, useLayoutEffect, useInsertionEffect } from 'react'
+
+export default function Index() {
+  useEffect(() => {
+    console.log('useEffect'); //打印两次
+  })
+  useLayoutEffect(() => {
+    console.log('useLayoutEffect'); //打印两次
+  })
+  useInsertionEffect(() => {
+    console.log('useInsertionEffect'); //打印一次
+  })
+  return (
+    <div>index</div>
+  )
+}
+
+```
+
