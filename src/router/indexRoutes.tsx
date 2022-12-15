@@ -7,7 +7,8 @@ import LoadableComponent from '../view/LoadableComponent实现组件懒加载'
 import useMemo from '../view/useMemo'
 import useImperativeHandle from '../view/useImperativeHandle'
 import Effect from '../view/三个Effect的区别'
-import useTransition from '../view//useTransition'
+import useTransition from '../view/useTransition'
+import useCallback from '../view/useCallback'
 
 export default function IndexRoutes() {
   return (
@@ -20,7 +21,8 @@ export default function IndexRoutes() {
         <Route path='/useImperativeHandle' component={useImperativeHandle} />
         <Route path='/Effect' component={Effect} />
         <Route path='/useTransition' component={useTransition} />
-        <Redirect to='/useTransition' />
+        <Route path='/useCallback' component={useCallback} />
+        <Redirect to='/useCallback' />
       </Switch>
     </BrowserRouter>
   )
