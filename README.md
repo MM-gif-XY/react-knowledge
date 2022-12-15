@@ -4,17 +4,20 @@ React在原生中要使用lazy和Suspense组件进行路由组件的懒加载
 import React, { lazy, Suspense } from 'react'
 import { BrowserRouter, Route, Router, Switch, Link } from 'react-router-dom'
 
+//导入路由的方法
 const Subpage1 = lazy(() => import('./Subpage1'))
 const Subpage2 = lazy(() => import('./Subpage2'))
 
 export default function Lazy_loading() {
   return (
     <div>
-      <h1>React内置的路由懒加载方法 lazy和Suspense搭配使用</h1>
-      <button><Link to="/Lazy_loading/subpage1">to subpage1</Link></button>
+      <h1>React内置的路由懒加载方法 lazy和Suspense搭配使用</h1> 
+      {/*点击实现跳转的方法*/}
+      <button><Link to="/Lazy_loading/subpage1">to subpage1</Link></button> 
       <button><Link to="/Lazy_loading/subpage2">to subpage2</Link></button>
       <Switch>
         <Suspense fallback={<div>加载中</div>}>
+        {/*页面展示的位置，需要使用Suspense包裹路由*/}
           <Route path="/Lazy_loading/subpage1" component={Subpage1} />
           <Route path="/Lazy_loading/subpage2" component={Subpage2} />
         </Suspense>
@@ -35,6 +38,7 @@ import React, { useState } from 'react'
 import { Route, Switch, Link } from 'react-router-dom'
 import loadable from '@loadable/component'
 
+//导入组件的方法
 const one = loadable(() => import('./one'))
 const two = loadable(() => import('./two'))
 // const AsyncPage = loadable((props: any) => import(`./${props.page}`), {
@@ -46,10 +50,12 @@ export default function Index() {
   return (
     <div>
       <h1>LoadableComponent实现组件懒加载</h1>
+      {/*点击实现跳转的方法*/}
       <button onClick={() => setPage('one')}><Link to='/LoadableComponent/one'>one</Link></button>
       <button onClick={() => setPage('two')}><Link to='/LoadableComponent/two'>two</Link></button>
       {/* {page && <AsyncPage page={page} />} */}
       <Switch>
+        {/*页面展示的位置*/}
         <Route path='/LoadableComponent/one' component={one} />
         <Route path='/LoadableComponent/two' component={two} />
       </Switch>
@@ -72,16 +78,17 @@ import loadable from '@loadable/component'
 // const two = loadable(() => import('./two'))
 const AsyncPage = loadable((props: any) => import(`./${props.page}`), {
   cacheKey: props => props.page,
-})
+}) //导入组件的方法
 
 export default function Index() {
   const [page, setPage] = useState("one")
   return (
     <div>
       <h1>LoadableComponent实现组件懒加载</h1>
+      {/*点击实现跳转的方法*/}
       <button onClick={() => setPage('one')}><Link to='/LoadableComponent/one'>one</Link></button>
       <button onClick={() => setPage('two')}><Link to='/LoadableComponent/two'>two</Link></button>
-      {page && <AsyncPage page={page} />}
+      {page && <AsyncPage page={page} />} {/*页面展示内容，搭配useState实现修改状态后改变页面*/}
       {/* <Switch>
         <Route path='/LoadableComponent/one' component={one} />
         <Route path='/LoadableComponent/two' component={two} />
