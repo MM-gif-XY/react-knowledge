@@ -170,7 +170,7 @@ export default function Index() {
   //useMemo是用来缓存函数返回的结果，与usecallback相似
   const result = useMemo(() => {
     return results(10, 10)
-  }, [])
+  }, []) //数组是填写依赖项的，当调用函数的依赖发生了改变要重新调用函数
   return (
     <div>
       <h1>useMemo钩子</h1>
