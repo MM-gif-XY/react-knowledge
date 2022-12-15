@@ -233,3 +233,92 @@ export default function useMemo_demo(props: any) {
 
 ```
 
+## React中父组件获取子组件的方法或数据
+
+**使用React.forwardRef包裹子组件----下面的方法会直接将子组件的dom元素给父组件操作**
+
+```jsx
+//父组件
+import React, { useRef, useEffect } from 'react'
+import Demo from './demo'
+
+export default function Index() {
+  const demoref = useRef()
+  useEffect(() => {
+    console.log(demoref.current);
+  }, [])
+
+  return (
+    <div>
+      <h1>useImperativeHandle</h1>
+      <Demo ref={demoref} />
+    </div>
+  )
+}
+//子组件
+import React, { useRef } from 'react'
+
+//下面的ref参数必须
+function Demo(props: any, ref: any) {
+  {/* 当要在父组件中获取子组件的元素的时候，子组件要使用React.forwardRef包裹整个组件，并要在参数中写上ref参数 */ }
+  const inputref = useRef<HTMLInputElement>(null)
+  const handle = () => {
+    console.log((inputref.current as any).value);
+  }
+  return (
+    <div >
+      <h1 ref={ref}>demo</h1>
+      <input type="text" ref={inputref} />
+      <button onClick={() => { handle() }}>获取input的值</button>
+    </div>
+  )
+}
+
+export default React.forwardRef(Demo)
+```
+
+**React.forwardRef包裹子组件并搭配useImperativeHandle钩子使用---由子组件限制父组件操作dom元素或方法**
+
+```jsx
+// 父组件
+import React, { useRef, useEffect } from 'react'
+import Demo from './demo'
+
+export default function Index() {
+  const demoref = useRef()
+  useEffect(() => {
+    console.log(demoref.current);
+  }, [])
+
+  return (
+    <div>
+      <h1>useImperativeHandle</h1>
+      <Demo ref={demoref} />
+    </div>
+  )
+}
+
+//子组件
+import React, { useRef, useImperativeHandle } from 'react'
+
+function Demo(props: any, ref: any) {
+  {/* 当要在父组件中获取子组件的元素的时候，子组件要使用React.forwardRef包裹整个组件，并要在参数中写上ref参数 */ }
+  const inputref = useRef<HTMLInputElement>(null)
+  useImperativeHandle(ref, () => {
+    return handle //将handle方法返回给父组件使用
+  }) //useImperativeHandle可以用来将ref返回给父组件中的值进行限制，不能由父组件直接操作子组件的dom
+  const handle = () => {
+    console.log((inputref.current as any).value);
+  }
+  return (
+    <div >
+      <h1>demo</h1>
+      <input type="text" ref={inputref} />
+      <button onClick={() => { handle() }}>获取input的值</button>
+    </div>
+  )
+}
+
+export default React.forwardRef(Demo)
+```
+
