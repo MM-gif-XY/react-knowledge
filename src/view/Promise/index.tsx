@@ -1,4 +1,6 @@
 import React from 'react'
+import PromiseAPI from './PromiseAPI';
+import PromiseFunction from './PromiseFunction';
 
 function rand(m: any, n: any) {
   return Math.ceil(Math.random() * (n - m + 1)) + m - 1;
@@ -26,6 +28,8 @@ export default function index() {
         }
       }, 1000)
     })
+    console.log(p);
+
     // 第一个是成功时候的回调，第二个是失败的回调
     p.then((value) => {
       alert('恭喜----' + value)
@@ -38,6 +42,10 @@ export default function index() {
     <div>
       <h1>Promise</h1>
       <button onClick={() => { handle() }}>点击抽奖</button>
+      <hr />
+      <PromiseAPI />
+      <hr />
+      <PromiseFunction />
     </div>
   )
 }
