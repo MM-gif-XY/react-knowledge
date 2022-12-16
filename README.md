@@ -464,9 +464,9 @@ export default function index() {
       setTimeout(() => {
         let n = rand(1, 100);
         if (n <= 30) {
-          resolve(n) //触发之后可以将promise对象的状态设置为成功
+          resolve(n) //触发之后可以将promise对象的状态设置为成功 可以将异步操作的参数传递给成功的回调中
         } else {
-          reject(n) //触发之后可以将promise对象的状态设置为失败
+          reject(n) //触发之后可以将promise对象的状态设置为失败 可以将异步操作的参数传递给失败的回调中
         }
       }, 1000)
     })
