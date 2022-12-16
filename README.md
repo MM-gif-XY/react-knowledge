@@ -630,3 +630,30 @@ export default function PromiseFunction() {
 
 ```
 
+**Promise.race方法**
+
+```jsx
+import React from 'react'
+
+export default function PromiseFunction() {
+  const handlerace = () => {
+    let p1 = new Promise<any>((resolve, reject) => {
+      resolve('ok')
+    })
+    let p2 = Promise.resolve('Success')
+    let p3 = Promise.resolve('OK')
+
+    const result = Promise.race([p1, p2, p3])
+    console.log('result', result)
+  }
+
+  return (
+    <div>
+      <h1>PromiseFunction</h1>
+      <button onClick={() => { handlerace() }}>Promise.race方法</button><span>返回一个由n个promise对象的数组,数组中第一个promise对象返回结果决定最终结果</span><br />
+    </div>
+  )
+}
+
+```
+
