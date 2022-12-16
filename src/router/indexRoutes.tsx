@@ -9,6 +9,7 @@ import useImperativeHandle from '../view/useImperativeHandle'
 import Effect from '../view/三个Effect的区别'
 import useTransition from '../view/useTransition'
 import useCallback from '../view/useCallback'
+import Promise from '../view/Promise'
 
 export default function IndexRoutes() {
   return (
@@ -22,7 +23,8 @@ export default function IndexRoutes() {
         <Route path='/Effect' component={Effect} />
         <Route path='/useTransition' component={useTransition} />
         <Route path='/useCallback' component={useCallback} />
-        <Redirect to='/useCallback' />
+        <Route path='/Promise' component={Promise} />
+        <Redirect to='/Promise' />
       </Switch>
     </BrowserRouter>
   )
