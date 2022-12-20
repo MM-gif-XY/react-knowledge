@@ -8,7 +8,7 @@
 
 *[React中父组件获取子组件的方法或数据](#React中父组件获取子组件的方法或数据)
 
-*[useEffect-useLayoutEffect-useInsertionEffect区别](#useEffectu-seLayoutEffect-useInsertionEffect区别)
+*[useEffect-useLayoutEffect-useInsertionEffect区别](#useEffect-useLayoutEffect-useInsertionEffect区别)
 
 *[useTransition](#useTransition)
 
