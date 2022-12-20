@@ -1,4 +1,5 @@
 ## lazy与Suspense实现组件懒加载
+
 React在原生中要使用lazy和Suspense组件进行路由组件的懒加载
 ```jsx
 import React, { lazy, Suspense } from 'react'
