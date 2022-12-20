@@ -1,18 +1,18 @@
 import React from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import { actions } from './store/counter'
+import { useSelector, useDispatch } from 'react-redux' //获取仓库的状态变量，以及触发仓库的方法
+import { actions } from './store/counter' //调用仓库中的方法使用
 
 export default function Index() {
-  const counter = useSelector((state) => ((state as any).counter.counter))
+  const counter = useSelector((state) => ((state as any).counter.counter)) //获取创库中的状态变量
   const dispatch = useDispatch()
   const Increment = () => {
-    dispatch(actions.increment())
+    dispatch(actions.increment()) //调用仓库中的方法
   }
   const Decrement = () => {
-    dispatch(actions.decrement())
+    dispatch(actions.decrement()) //调用仓库中的方法
   }
   const addBy = () => {
-    dispatch(actions.addBy(10))
+    dispatch(actions.addBy(10)) //调用仓库中的方法
   }
   return (
     <div>

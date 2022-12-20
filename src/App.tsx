@@ -6,8 +6,8 @@ function App() {
 
   return (
     <div className="App">
-      {/* <IndexRoutes /> */}
-      <Datepage />
+      <IndexRoutes />
+      {/* <Datepage /> */}
     </div>
   );
 }
