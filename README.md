@@ -8,9 +8,13 @@
 
 *[React中父组件获取子组件的方法或数据](#React中父组件获取子组件的方法或数据)
 
-*[useMome](#useMome)
-*[useMome](#useMome)
-*[useMome](#useMome)
+*[useEffect, useLayoutEffect, useInsertionEffect区别](#useEffect, useLayoutEffect, useInsertionEffect区别)
+
+*[useTransition](#useTransition)
+
+*[Promise](#Promise)
+
+*[redux](#redux)
 
 ## lazy与Suspense实现组件懒加载
 React在原生中要使用lazy和Suspense组件进行路由组件的懒加载
