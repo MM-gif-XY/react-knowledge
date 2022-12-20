@@ -1,0 +1,121 @@
+.ant-picker-range {
+  width: 475px;
+}
+.ant-picker {
+  background-color: transparent;
+  border-color: transparent !important;
+}
+.ant-picker-focused .ant-picker-focused {
+  border-color: transparent;
+}
+:where(.css-dev-only-do-not-override-26rdvq).ant-picker-dropdown
+  .ant-picker-cell-in-view:is(
+    :where(.css-dev-only-do-not-override-26rdvq).ant-picker-dropdown
+      .ant-picker-cell-selected
+  )
+  .ant-picker-cell-inner,
+:where(.css-dev-only-do-not-override-26rdvq).ant-picker-dropdown
+  .ant-picker-cell-in-view:is(
+    :where(.css-dev-only-do-not-override-26rdvq).ant-picker-dropdown
+      .ant-picker-cell-range-start
+  )
+  .ant-picker-cell-inner,
+:where(.css-dev-only-do-not-override-26rdvq).ant-picker-dropdown
+  .ant-picker-cell-in-view:is(
+    :where(.css-dev-only-do-not-override-26rdvq).ant-picker-dropdown
+      .ant-picker-cell-range-end
+  )
+  .ant-picker-cell-inner {
+  color: black;
+  background: #e5e7eb;
+}
+
+.ant-picker-cell-inner {
+  min-width: 35px !important;
+  height: 30px !important;
+  line-height: 30px !important;
+}
+.ant-picker-cell-inner::before {
+  border: 0 !important;
+  background: royalblue !important;
+  z-index: -1 !important;
+}
+.ant-picker-active-bar {
+  display: none !important;
+}
+.ant-picker-dropdown-range {
+  padding: 0;
+}
+.ant-picker-time-panel {
+  display: none !important;
+}
+.ant-picker-panel-container {
+  background-color: transparent !important;
+}
+.ant-picker-date-panel {
+  width: 475px !important;
+}
+.ant-picker-range-arrow {
+  display: none !important;
+}
+.ant-picker-header {
+  border-bottom: 0 !important;
+  button {
+    font-size: 25px;
+  }
+  button:hover {
+    color: black !important;
+  }
+}
+.ant-picker-header-view {
+  font-size: 25px;
+}
+.ant-picker-panel-container {
+  box-shadow: inherit !important;
+}
+th {
+  font-size: 23px;
+  width: 65px !important;
+}
+td {
+  font-size: 24px;
+}
+.ant-picker-panel {
+  border: 0px !important;
+}
+.datepage {
+  display: flex;
+  justify-content: center;
+  width: 960px;
+  height: 456px;
+  position: absolute;
+  transform: translate(50%, 50%);
+  background-color: #f4f4f4;
+  border-radius: 20px;
+  .datepage-left {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    .letf-infaction {
+      width: 100%;
+      height: 70%;
+    }
+    .button {
+      width: 250px;
+      height: 50px;
+      border-radius: 20px;
+      background-color: black;
+      color: #fff;
+      font-size: 18px;
+      text-align: center;
+      line-height: 50px;
+    }
+  }
+  .datepage-right {
+    width: 50%;
+    height: 100%;
+  }
+}

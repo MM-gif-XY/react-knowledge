@@ -10,6 +10,7 @@ import Effect from '../view/三个Effect的区别'
 import useTransition from '../view/useTransition'
 import useCallback from '../view/useCallback'
 import Promise from '../view/Promise'
+import redux from '../view/redux'
 
 export default function IndexRoutes() {
   return (
@@ -24,7 +25,8 @@ export default function IndexRoutes() {
         <Route path='/useTransition' component={useTransition} />
         <Route path='/useCallback' component={useCallback} />
         <Route path='/Promise' component={Promise} />
-        <Redirect to='/Promise' />
+        <Route path='/redux' component={redux} />
+        <Redirect to='/redux' />
       </Switch>
     </BrowserRouter>
   )
