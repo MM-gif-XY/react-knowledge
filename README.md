@@ -659,7 +659,7 @@ export default function PromiseFunction() {
 
 ## redux
 
-![image-20221220155610068](C:\Users\AnyDoorTrip-09\Desktop\react-knowledge\public\image\image-20221220155610068.png)
+![https://github.com/MM-gif-XY/react-knowledge/blob/master/public/image/image-20221220155610068.png)
 
 ![image-20221220155924232](C:\Users\AnyDoorTrip-09\Desktop\react-knowledge\public\image\image-20221220155924232.png)
 
