@@ -340,7 +340,7 @@ function Demo(props: any, ref: any) {
 export default React.forwardRef(Demo)
 ```
 
-## useEffect,useLayoutEffect,useInsertionEffect区别
+## useEffect-useLayoutEffect-useInsertionEffect区别
 
 **对应的文件夹中drawio文件需要在vscode中安装Draw.io Integration插件（待理解）**
 
