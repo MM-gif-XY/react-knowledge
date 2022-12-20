@@ -665,7 +665,7 @@ export default function PromiseFunction() {
 
 ![](https://github.com/MM-gif-XY/react-knowledge/raw/master/public/image/image-20221220160150276.png)
 
-![image-20221220162616300](C:\Users\AnyDoorTrip-09\Desktop\react-knowledge\public\image\image-20221220162616300.png)
+![](https://github.com/MM-gif-XY/react-knowledge/raw/master/public/image/image-20221220162616300.png)
 
 **页面**
 
