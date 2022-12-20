@@ -1,5 +1,22 @@
-## lazy与Suspense实现组件懒加载
+*[lazy与Suspense实现组件懒加载](#lazy与Suspense实现组件懒加载 )
 
+*[LoadableComponent实现组件懒加载](#LoadableComponent实现组件懒加载)
+
+*[React-loadable实现组件懒加载](#React-loadable实现组件懒加载)
+
+*[useMome](#useMome)
+
+*[React中父组件获取子组件的方法或数据](#React中父组件获取子组件的方法或数据)
+
+*[useEffect-useLayoutEffect-useInsertionEffect区别](#useEffect-useLayoutEffect-useInsertionEffect区别)
+
+*[useTransition](#useTransition)
+
+*[Promise](#Promise)
+
+*[redux](#redux)
+
+## lazy与Suspense实现组件懒加载
 React在原生中要使用lazy和Suspense组件进行路由组件的懒加载
 ```jsx
 import React, { lazy, Suspense } from 'react'
@@ -323,7 +340,7 @@ function Demo(props: any, ref: any) {
 export default React.forwardRef(Demo)
 ```
 
-## useEffect, useLayoutEffect, useInsertionEffect区别
+## useEffect-useLayoutEffect-useInsertionEffect区别
 
 **对应的文件夹中drawio文件需要在vscode中安装Draw.io Integration插件（待理解）**
 
@@ -660,13 +677,13 @@ export default function PromiseFunction() {
 
 ## redux
 
-![image-20221220155610068](C:\Users\AnyDoorTrip-09\Desktop\react-knowledge\public\image\image-20221220155610068.png)
+![](https://github.com/MM-gif-XY/react-knowledge/raw/master/public/image/image-20221220155610068.png)
 
-![image-20221220155924232](C:\Users\AnyDoorTrip-09\Desktop\react-knowledge\public\image\image-20221220155924232.png)
+![](https://github.com/MM-gif-XY/react-knowledge/raw/master/public/image/image-20221220155924232.png)
 
-![image-20221220160150276](C:\Users\AnyDoorTrip-09\Desktop\react-knowledge\public\image\image-20221220160150276.png)
+![](https://github.com/MM-gif-XY/react-knowledge/raw/master/public/image/image-20221220160150276.png)
 
-![image-20221220162616300](C:\Users\AnyDoorTrip-09\Desktop\react-knowledge\public\image\image-20221220162616300.png)
+![](https://github.com/MM-gif-XY/react-knowledge/raw/master/public/image/image-20221220162616300.png)
 
 **页面**
 
@@ -739,4 +756,3 @@ const counterSlice = createSlice({
 export const actions = counterSlice.actions;  //导入actions方便页面使用
 export default counterSlice;  //导入仓库方便store使用
 ```
-
