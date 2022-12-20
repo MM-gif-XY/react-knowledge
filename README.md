@@ -1,4 +1,4 @@
-[lazy与Suspense实现组件懒加载](#lazy与Suspense实现组件懒加载 )
+[lazy与Suspense实现组件懒加载](#lazy与Suspense实现组件懒加载)
 
 [LoadableComponent实现组件懒加载](#LoadableComponent实现组件懒加载)
 
